@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  modeller:
+    image: ghcr.io/freas-tools/freas-bpmn4frss-react:latest
+    restart: always
+    environment:
+      VITE_PORT: 8080
+      VITE_VALIDATION_ANALYZER_URL: http://localhost:5000
+    ports:
+      - 8080:8080
+  rule-based-analyser:
+    image: ghcr.io/freas-tools/freas-analyzer-validity:latest
+    restart: always
+    environment:
+      UVICORN_PORT: 5000
+    ports:
+      - 5000:5000
