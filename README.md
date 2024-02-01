@@ -1,5 +1,9 @@
 # Demostration Project for FREAS
 
+[Modeller](https://github.com/FREAS-tools/freas-bpmn4frss-react) - Front-end web editor for BPMN4FRSS models
+
+[Rule-Based Analyser](https://github.com/FREAS-tools/freas-analyzer-validity) - BPMN4FRSS model analyzer based on Z3
+
 ## Running FREAS
 Use docker compose to run FREAS
 ```
