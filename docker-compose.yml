@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   modeller:
-    image: ghcr.io/freas-tools/freas-bpmn4frss-react:latest
+    image: ghcr.io/freas-tools/freas-bpmn4frss-react:0.1.2
     restart: always
     environment:
       VITE_PORT: 8080
@@ -9,7 +9,7 @@ services:
     ports:
       - 8080:8080
   rule-based-analyser:
-    image: ghcr.io/freas-tools/freas-analyzer-validity:latest
+    image: ghcr.io/freas-tools/freas-analyzer-validity:0.1.1
     restart: always
     environment:
       UVICORN_PORT: 5000
