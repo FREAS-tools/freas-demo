@@ -1,4 +1,4 @@
-# Demonstration Project for FREAS
+# Demonstration of FREAS
 
 [Modeller](https://github.com/FREAS-tools/freas-bpmn4frss-react) - Front-end web editor for BPMN4FRSS models
 
@@ -13,6 +13,10 @@ In the second iteration (`avp_issuing_permit_2iteration.bpmn`), the error is res
 * An attacker fabricates a *Parking reservation* and sends it to the *PLT* interface due to missing access control. Leading to loss of *Parking permit* integrity.
 
 Thus, the designer uses Evidence Quality analysis to check the supporting evidence if the *Parking reservation received* event (ID: `IntermediateThrowEvent_0qu79dp`) or the *PLT parking permit storage* data store reference (ID: `DataStoreReference_1o9b6q1`) are compromised. To see the output, please run Evidence Quality analysis in FREAS for both cases.
+
+## Walkthrough
+
+Please see `avp_issuing_permit_demo.mp4` for a video walkthrough of FREAS, which demonstrates the AVP models.
 
 ## Running FREAS
 Use docker compose to run FREAS
