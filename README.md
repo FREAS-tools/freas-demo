@@ -1,10 +1,24 @@
 # Demonstration of FREAS
 
+This repository is a collection of examples for FREAS.
+
+## FREAS Components
+
 [Modeller](https://github.com/FREAS-tools/freas-bpmn4frss-react) - Front-end web editor for BPMN4FRSS models
 
 [Rule-Based Analyser](https://github.com/FREAS-tools/freas-analyzer-validity) - BPMN4FRSS model analyzer based on Z3
 
-This repository serves as a demonstration of FREAS on the Automated Valet Parking (AVP) system (see https://doi.org/10.1145/3465481.3470052 for details). It consists of two models describing two iterations of a forensic-ready AVP system.
+## Running FREAS
+Use docker compose to run FREAS
+```
+docker compose up
+```
+
+## Example Models
+The folder contains a collection of models that showcase the FREAS analyser.
+
+## AVP Issuing Permit
+A demonstration of FREAS on the Automated Valet Parking (AVP) system (see https://doi.org/10.1145/3465481.3470052 for details). It consists of two models describing two iterations of a forensic-ready AVP system.
 
 The first iteration (`avp_issuing_permit_1iteration.bpmn`) contains an error in the model. Furthermore, multiple design weaknesses are also present. The analyser highlights them so that a designer can resolve the errors and consider the possible weak points. To see the output, please run Validity and Hint analysis in FREAS.
 
@@ -14,12 +28,6 @@ In the second iteration (`avp_issuing_permit_2iteration.bpmn`), the error is res
 
 Thus, the designer uses Evidence Quality analysis to check the supporting evidence if the *Parking reservation received* event (ID: `IntermediateThrowEvent_0qu79dp`) or the *PLT parking permit storage* data store reference (ID: `DataStoreReference_1o9b6q1`) are compromised. To see the output, please run Evidence Quality analysis in FREAS for both cases.
 
-## Walkthrough
+### Walkthrough
 
 Please see `avp_issuing_permit_demo.mp4` for a video walkthrough of FREAS, which demonstrates the AVP models.
-
-## Running FREAS
-Use docker compose to run FREAS
-```
-docker compose up
-```
